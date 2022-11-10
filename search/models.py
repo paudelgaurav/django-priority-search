@@ -6,3 +6,6 @@ class Product(models.Model):
     second_title = models.CharField(max_length=50)
     description = models.TextField(blank=True)
     note = models.TextField(blank=True)
+
+    def __str__(self) -> str:
+        return self.title
