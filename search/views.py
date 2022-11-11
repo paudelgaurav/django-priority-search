@@ -41,7 +41,7 @@ class ProductFilterSet(filters.FilterSet):
                 When(
                     (Q(note__icontains=value) & ~Q(title__icontains=value))
                     & (Q(note__icontains=value) & ~Q(description__icontains=value)),
-                    then=2,
+                    then=1,
                 ),
                 default=0,
             ),
